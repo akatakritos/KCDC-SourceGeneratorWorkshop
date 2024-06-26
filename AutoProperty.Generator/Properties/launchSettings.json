@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "AutoProperty.Generator": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "../AutoProperty.Sample/AutoProperty.Sample.csproj"
+    }
+  }
+}
