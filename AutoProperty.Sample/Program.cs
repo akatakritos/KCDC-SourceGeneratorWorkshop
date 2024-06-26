@@ -2,6 +2,9 @@
 
 
 using AutoProperty.Sample;
+[assembly: AutoProperty.Generator.AutoProperty(typeof(IAuditMetadata))]
+[assembly: AutoProperty.Generator.AutoProperty(typeof(IHasId))]
+[assembly: AutoProperty.Generator.AutoProperty(typeof(IHasActiveFlag))]
 
 var book = new Book()
 {
