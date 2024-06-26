@@ -12,6 +12,25 @@
         <IsRoslynComponent>true</IsRoslynComponent>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <Version>1.0.0</Version>
+        <AssemblyVersion>$(Version).0</AssemblyVersion>
+        <AssemblyFileVersion>$(Version).0</AssemblyFileVersion>
+        <Product>AutoProperty</Product>
+        <Description>Contains a C# Source Generator auto implement interface properties.</Description>
+
+        <PackageOutputPath>$(MSBuildProjectDirectory)\..\build</PackageOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Package the generator in the analyzer directory of the nuget package -->
+        <None Include="$(OutputPath)\$(AssemblyName).dll"
+              Pack="true"
+              PackagePath="analyzers/dotnet/cs" Visible="false" />
+    </ItemGroup>
+
     <!-- The following libraries include the source generator interfaces and types we need -->
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
