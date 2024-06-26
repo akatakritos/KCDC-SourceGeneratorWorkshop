@@ -6,7 +6,7 @@ public interface IAuditMetadata
     DateTimeOffset LastUpdated { get; set; }
 }
 
-public class Book : IAuditMetadata
+public partial class Book : IAuditMetadata
 {
     public required string Title { get; set; }
 
