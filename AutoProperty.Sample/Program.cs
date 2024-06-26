@@ -10,4 +10,10 @@ var book = new Book()
     LastUpdated = DateTimeOffset.Now
 };
 
+var author = new Author()
+{
+    Name = "J.R.R. Tolkien",
+};
+
 Console.WriteLine(book);
+Console.WriteLine(author);
